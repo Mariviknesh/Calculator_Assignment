@@ -7,6 +7,7 @@ public class Calc {
         int a;
         int b;
         int ch;
+        String res;
         Scanner mysc=new Scanner(System.in);
         Logger log=Logger.getLogger("com.api.jar");
         while(true)
@@ -26,14 +27,16 @@ public class Calc {
                 Add obj=new Add();
                 obj.setA(a);
                 obj.setB(b);
-                log.info(""+obj.operation(a,b));
+                res=""+obj.operation(a,b);
+                log.info(res);
             }
             else if(ch==2)
             {
                 Diff obj=new Diff();
                 obj.setA(a);
                 obj.setB(b);
-                log.info(""+obj.operation(a,b));
+                res=""+obj.operation(a,b);
+                log.info(res);
 
             }
             else if(ch==3)
@@ -41,7 +44,8 @@ public class Calc {
                 Mul obj=new Mul();
                 obj.setA(a);
                 obj.setB(b);
-                log.info(""+obj.operation(a,b));
+                res=""+obj.operation(a,b);
+                log.info(res);
 
             }
             else if(ch==4)
@@ -49,7 +53,8 @@ public class Calc {
                 Div obj=new Div();
                 obj.setA(a);
                 obj.setB(b);
-                log.info(""+obj.operation(a,b));
+                res=""+obj.operation(a,b);
+                log.info(res);
             }
             else
             {
