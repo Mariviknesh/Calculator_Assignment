@@ -12,7 +12,8 @@ public class Calc {
         Logger log=Logger.getLogger("com.api.jar");
         while(true)
         {
-            System.out.println("Enter the 2 numbers:\n");
+            log.info("Enter the 2 numbers:");
+
             a=mysc.nextInt();
             b=mysc.nextInt();
             log.info("1.Addition");
