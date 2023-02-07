@@ -6,34 +6,34 @@ public class Calc {
     public static void main(String[] args) {
         int a;
         int b;
-        int res;
         int ch;
         Scanner mysc=new Scanner(System.in);
+        Logger log=Logger.getLogger("com.api.jar");
         while(true)
         {
             System.out.println("Enter the 2 numbers:\n");
             a=mysc.nextInt();
             b=mysc.nextInt();
-            System.out.println("1.Addition\n");
-            System.out.println("2.Subraction\n");
-            System.out.println("3.Multiplication\n");
-            System.out.println("4.Division\n");
-            System.out.println("5.Exit\n");
-            System.out.println("Enter the choice:\n");
+            log.info("1.Addition");
+            log.info("2.Subraction");
+            log.info("3.Multiplication");
+            log.info("4.Division");
+            log.info("5.Exit");
+            log.info("Enter the choice:");
             ch=mysc.nextInt();
             if(ch==1)
             {
                 Add obj=new Add();
                 obj.setA(a);
                 obj.setB(b);
-                System.out.println(obj.operation(a,b));
+                log.info(""+obj.operation(a,b));
             }
             else if(ch==2)
             {
                 Diff obj=new Diff();
                 obj.setA(a);
                 obj.setB(b);
-                System.out.println(obj.operation(a,b));
+                log.info(""+obj.operation(a,b));
 
             }
             else if(ch==3)
@@ -41,7 +41,7 @@ public class Calc {
                 Mul obj=new Mul();
                 obj.setA(a);
                 obj.setB(b);
-                System.out.println(obj.operation(a,b));
+                log.info(""+obj.operation(a,b));
 
             }
             else if(ch==4)
@@ -49,7 +49,7 @@ public class Calc {
                 Div obj=new Div();
                 obj.setA(a);
                 obj.setB(b);
-                System.out.println(obj.operation(a,b));
+                log.info(""+obj.operation(a,b));
             }
             else
             {
@@ -74,11 +74,7 @@ class Calculator{
     public void setB(int b) {
         this.b = b;
     }
-    //    Calculator(int a,int b)
-//    {
-//        this.a=a;
-//        this.b=b;
-//    }
+
 }
 class Add extends Calculator
 {
