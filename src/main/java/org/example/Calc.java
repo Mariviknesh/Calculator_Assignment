@@ -37,7 +37,6 @@ public class Calc {
                 obj.setB(b);
                 res=""+obj.operation(a,b);
                 log.info(res);
-
             }
             else if(ch==3)
             {
