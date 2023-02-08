@@ -28,7 +28,7 @@ public class Calc {
                 Add obj=new Add();
                 obj.setA(a);
                 obj.setB(b);
-                res=""+obj.operation(a,b);
+                res=""+obj.operation();
                 log.info(res);
             }
             else if(ch==2)
@@ -36,7 +36,7 @@ public class Calc {
                 Diff obj=new Diff();
                 obj.setA(a);
                 obj.setB(b);
-                res=""+obj.operation(a,b);
+                res=""+obj.operation();
                 log.info(res);
             }
             else if(ch==3)
@@ -44,7 +44,7 @@ public class Calc {
                 Mul obj=new Mul();
                 obj.setA(a);
                 obj.setB(b);
-                res=""+obj.operation(a,b);
+                res=""+obj.operation();
                 log.info(res);
 
             }
@@ -53,7 +53,7 @@ public class Calc {
                 Div obj=new Div();
                 obj.setA(a);
                 obj.setB(b);
-                res=""+obj.operation(a,b);
+                res=""+obj.operation();
                 log.info(res);
             }
             else
@@ -76,36 +76,41 @@ class Calculator{
     public void setA(int a) {
         this.a = a;
     }
+    public int getA(){
+        return this.a;
+    }
     public void setB(int b) {
         this.b = b;
+    }
+    public int getB(){
+        return this.b;
     }
 
 }
 class Add extends Calculator
 {
-    public int operation(int a, int b)
+    public int operation()
     {
-        return a+b;
+
+        return getA()+getB();
     }
 }
 class Diff extends Calculator
 {
-    public int operation(int a, int b)
+    public int operation()
     {
-        return a-b;
+        return getA()-getB();
     }
 }class Mul extends Calculator
 {
-
-
-    public int operation(int a, int b)
+    public int operation()
     {
-        return a*b;
+        return getA()*getB();
     }
 }class Div extends Calculator
 {
-       public int operation(int a, int b)
+       public int operation()
     {
-        return a/b;
+        return getA()/getB();
     }
 }
