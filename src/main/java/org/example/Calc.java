@@ -17,7 +17,7 @@ public class Calc {
             a=mysc.nextInt();
             b=mysc.nextInt();
             log.info("1.Addition");
-            log.info("2.Subraction");
+            log.info("2.Subtraction");
             log.info("3.Multiplication");
             log.info("4.Division");
             log.info("5.Exit");
@@ -64,53 +64,5 @@ public class Calc {
 
     }
 }
-class Calculator{
-    int a;
-    int b;
-    Calculator()
-    {
-        this.a=0;
-        this.b=0;
-    }
 
-    public void setA(int a) {
-        this.a = a;
-    }
-    public int getA(){
-        return this.a;
-    }
-    public void setB(int b) {
-        this.b = b;
-    }
-    public int getB(){
-        return this.b;
-    }
 
-}
-class Add extends Calculator
-{
-    public int operation()
-    {
-
-        return getA()+getB();
-    }
-}
-class Diff extends Calculator
-{
-    public int operation()
-    {
-        return getA()-getB();
-    }
-}class Mul extends Calculator
-{
-    public int operation()
-    {
-        return getA()*getB();
-    }
-}class Div extends Calculator
-{
-       public int operation()
-    {
-        return getA()/getB();
-    }
-}
